@@ -72,6 +72,16 @@ function createPDF(data, outputFilePath, imageFileName) {
     });
     doc.moveDown(0.5);
 
+    // Negative Keywords
+    doc.font('Roboto-Bold').fontSize(sectionTitleStyle.fontSize).fillColor(sectionTitleStyle.fillColor).text('Negative Keywords:', { bold: sectionTitleStyle.bold });
+    doc.moveDown(0.25);
+    doc.font('Roboto-Italic').fontSize(10).fillColor('#333').text(descriptions.negative_keywords, { align: 'start' });
+    doc.moveDown(0.5);
+    data.negativeKeywords.forEach((negativeKeyword) => {
+        doc.font('Roboto').fontSize(contentTextStyle.fontSize).fillColor(contentTextStyle.fillColor).text(`• ${negativeKeyword}`, { indent: 20 });
+    });
+    doc.moveDown(0.5);
+
     // Locations
     doc.font('Roboto-Bold').fontSize(sectionTitleStyle.fontSize).fillColor(sectionTitleStyle.fillColor).text('Locations:', { bold: sectionTitleStyle.bold });
     doc.moveDown(0.25);

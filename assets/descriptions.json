@@ -1,5 +1,6 @@
 {
   "keywords": "Keywords are terms within a user search which might trigger your ad being shown.\nNo character limit (longer keywords garner more specific searches. This means less clicks, but better clicks)",
+  "negative_keywords": "Negative keywords are terms within a user search which will prevent your ad being shown.\nNo character limit (very general negative keywords can prevent your ad from being shown)",
   "headlines": "Headlines are the title text at the top of your ad. They are shown in combinations of 2 -3\nMaximum 30 characters",
   "site_lines": "Site links appear below your ad as \nadditional links the user can click.",
   "descriptions": "Descriptions are the text below the headline in your ad. They are shown in combinations of 1-2\nMaximum 90 characters",
