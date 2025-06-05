@@ -88,7 +88,7 @@ function createPDF(data, outputFilePath, imageFileName) {
     doc.font('Roboto-Italic').fontSize(10).fillColor('#333').text(descriptions.locations, { align: 'start' });
     doc.moveDown(0.5);
     data.locations.forEach((location) => {
-        doc.font('Roboto').fontSize(contentTextStyle.fontSize).fillColor(contentTextStyle.fillColor).text(`• Location: ${location.location}, Reach: ${location.reach}`, { indent: 20 });
+        doc.font('Roboto').fontSize(contentTextStyle.fontSize).fillColor(contentTextStyle.fillColor).text(`• Location: ${location.location}${location.reach ? `, Reach: ${location.reach}`: ""}`, { indent: 20 });
     });
     doc.moveDown(0.5);
 

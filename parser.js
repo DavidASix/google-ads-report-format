@@ -40,7 +40,7 @@ function parseCSV(filePath) {
         }
 
         // Extract locations
-        if (row["Location"] && row["Reach"]) {
+        if (row["Location"] && row["Status"] === "Enabled") {
           locations.push({ location: row["Location"], reach: row["Reach"] });
         }
 
