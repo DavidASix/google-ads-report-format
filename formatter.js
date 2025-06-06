@@ -112,6 +112,12 @@ function createPDF(data, outputFilePath, imageFileName) {
     });
 
     // Ad Example
+    const imageDimensions = doc.openImage(imageFileName);
+    const imageHeight = imageDimensions.height * (500 / imageDimensions.width); // Scale height based on width
+
+    if (doc.y + imageHeight + 10 > doc.page.height - doc.page.margins.bottom) {
+        doc.addPage();
+    }
     doc.moveDown(3);
     doc.font('Roboto-Bold').fontSize(18).fillColor('#780202').text('Ad Example', { align: 'center' });
     doc.moveDown(0.5);
